@@ -14,16 +14,16 @@ async function fakeNetwork(a) {
   // })
 }
 
-const func =  (a)=>{
-  console.log('a', a);
-  console.log(arguments[0]);
-  return new Promise((res)=>{
+// const func =  (a)=>{
+//   console.log('a', a);
+//   console.log(arguments[0]);
+//   return new Promise((res)=>{
 
-  })
-}
+//   })
+// }
 
 
-func(44);
+// func(44);
 
 //   function test (resolve, reject){
 //     console.log('resolve', resolve);
@@ -58,4 +58,29 @@ func(44);
 //     console.log(array);
 // });
 
+
+// const a = 55;
+// console.log(window.a);
+
+window.onload = ()=>{
+  window.name = 'window';
+  var B = {
+    name: 'B'
+  }
+  
+  var A = {
+    name: 'A',
+    sayHello: function(){
+       var s = () => console.log(this.name) // 作用域时sayHello，指向的对象为A，所以调用该方程永远返回 'A'
+       return s//返回箭头函数s
+    }
+ }
+
+  console.log('jaa')
+  
+  A.sayHello()(); // A
+  A.sayHello().call(B); // B
+  var h = A.sayHello(); 
+  h(); // 报错undefined (window.h())
+}
 
