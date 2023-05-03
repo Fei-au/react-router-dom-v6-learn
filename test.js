@@ -79,8 +79,8 @@ window.onload = ()=>{
   console.log('jaa')
   
   A.sayHello()(); // A
-  A.sayHello().call(B); // B
+  A.sayHello().call(B); // A
   var h = A.sayHello(); 
-  h(); // 报错undefined (window.h())
+  h(); // A
 }
 
