@@ -1,29 +1,29 @@
-async function fakeNetwork(a) {
+// async function fakeNetwork(a) {
 
-  console.log(arguments[0])
-  console.log(arguments.length)
-  return new Promise(res => {
-    setTimeout(res, Math.random() * 800);
-  });
-
-
-
-  // return new Promise((resolve, reject)=>{
-  //     console.log(resolve);
-  //     console.log(reject);
-  // })
-}
-
-const func =  (a)=>{
-  console.log('a', a);
-  console.log(arguments[0]);
-  return new Promise((res)=>{
-
-  })
-}
+//   console.log(arguments[0])
+//   console.log(arguments.length)
+//   return new Promise(res => {
+//     setTimeout(res, Math.random() * 800);
+//   });
 
 
-func(44);
+
+//   // return new Promise((resolve, reject)=>{
+//   //     console.log(resolve);
+//   //     console.log(reject);
+//   // })
+// }
+
+// const func =  (a)=>{
+//   console.log('a', a);
+//   console.log(arguments[0]);
+//   return new Promise((res)=>{
+
+//   })
+// }
+
+
+// func(44);
 
 //   function test (resolve, reject){
 //     console.log('resolve', resolve);
@@ -59,3 +59,26 @@ func(44);
 // });
 
 
+
+function getAge(param, param2){
+  console.log(param)
+  console.log(param2)
+  return new Date().getFullYear() - this.birth
+}
+
+const xiaoming = {
+  birth: 1995,
+  age: function (){
+    // return new Date().getFullYear() - this.birth
+  },
+  age2: getAge,
+}
+
+let fn = xiaoming.age2;
+
+// console.log(fn());
+
+// console.log(xiaoming.age());
+// console.log(xiaoming.age2());
+// console.log(getAge.apply(xiaoming, [5,6]));
+console.log(getAge.call(xiaoming, 5,9));
