@@ -60,50 +60,60 @@
 
 
 
-function getAge(param, param2){
-  console.log(param)
-  console.log(param2)
-  return new Date().getFullYear() - this.birth
-}
+// function getAge(param, param2){
+//   console.log(param)
+//   console.log(param2)
+//   return new Date().getFullYear() - this.birth
+// }
 
-const xiaoming = {
-  birth: 1995,
-  age: function (){
-    // return new Date().getFullYear() - this.birth
-  },
-  age2: getAge,
-}
+// const xiaoming = {
+//   birth: 1995,
+//   age: function (){
+//     // return new Date().getFullYear() - this.birth
+//   },
+//   age2: getAge,
+// }
 
-let fn = xiaoming.age2;
+// let fn = xiaoming.age2;
 
-// console.log(fn());
+// // console.log(fn());
 
-// console.log(xiaoming.age());
-// console.log(xiaoming.age2());
-// console.log(getAge.apply(xiaoming, [5,6]));
-console.log(getAge.call(xiaoming, 5,9));
-// const a = 55;
-// console.log(window.a);
+// // console.log(xiaoming.age());
+// // console.log(xiaoming.age2());
+// // console.log(getAge.apply(xiaoming, [5,6]));
+// console.log(getAge.call(xiaoming, 5,9));
+// // const a = 55;
+// // console.log(window.a);
 
-window.onload = ()=>{
-  window.name = 'window';
-  var B = {
-    name: 'B'
-  }
+// window.onload = ()=>{
+//   window.name = 'window';
+//   var B = {
+//     name: 'B'
+//   }
   
-  var A = {
-    name: 'A',
-    sayHello: function(){
-       var s = () => console.log(this.name) // 作用域时sayHello，指向的对象为A，所以调用该方程永远返回 'A'
-       return s//返回箭头函数s
-    }
- }
+//   var A = {
+//     name: 'A',
+//     sayHello: function(){
+//        var s = () => console.log(this.name) // 作用域时sayHello，指向的对象为A，所以调用该方程永远返回 'A'
+//        return s//返回箭头函数s
+//     }
+//  }
 
-  console.log('jaa')
+//   console.log('jaa')
   
-  A.sayHello()(); // A
-  A.sayHello().call(B); // A
-  var h = A.sayHello(); 
-  h(); // A
-}
+//   A.sayHello()(); // A
+//   A.sayHello().call(B); // A
+//   var h = A.sayHello(); 
+//   h(); // A
+// }
 
+// let s = Boolean(1);
+// let s = new Number(1);
+// console.log(typeof s);
+
+let arr = [];
+let arr2 = new Array();
+let obj = {};
+let o;
+console.log(obj instanceof Array);
+console.log(typeof o);
