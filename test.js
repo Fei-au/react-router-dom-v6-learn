@@ -82,3 +82,28 @@ let fn = xiaoming.age2;
 // console.log(xiaoming.age2());
 // console.log(getAge.apply(xiaoming, [5,6]));
 console.log(getAge.call(xiaoming, 5,9));
+// const a = 55;
+// console.log(window.a);
+
+window.onload = ()=>{
+  window.name = 'window';
+  var B = {
+    name: 'B'
+  }
+  
+  var A = {
+    name: 'A',
+    sayHello: function(){
+       var s = () => console.log(this.name) // 作用域时sayHello，指向的对象为A，所以调用该方程永远返回 'A'
+       return s//返回箭头函数s
+    }
+ }
+
+  console.log('jaa')
+  
+  A.sayHello()(); // A
+  A.sayHello().call(B); // A
+  var h = A.sayHello(); 
+  h(); // A
+}
+
