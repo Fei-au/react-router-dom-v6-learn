@@ -5,8 +5,8 @@
       "removeComments": true,
       "preserveConstEnums": true,
       "sourceMap": false,
-    //   "skipLibCheck": true,
-        "typeRoots": [],
+      // "skipLibCheck": true,
+        // "typeRoots": [],
     },
     "files": [
       "t.ts",

@@ -111,9 +111,19 @@
 // let s = new Number(1);
 // console.log(typeof s);
 
-let arr = [];
-let arr2 = new Array();
-let obj = {};
-let o;
-console.log(obj instanceof Array);
-console.log(typeof o);
+// let arr = [];
+// let arr2 = new Array();
+// let obj = {};
+// let o;
+// console.log(obj instanceof Array);
+// console.log(typeof o);
+
+
+// let ar = ['34','awef'];
+// let ob = {
+//     0: 'haha',
+//     1: 'haha',
+// }
+// for (const key in ob) {
+//     console.log(key);
+// }
