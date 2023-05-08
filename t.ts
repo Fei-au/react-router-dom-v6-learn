@@ -83,7 +83,7 @@ let f: string = 'aa';
 // let c: Cat = a as Cat;
 
 
-jQuery('ff');
+// jQuery('ff');
 
 
 
