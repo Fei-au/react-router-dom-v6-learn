@@ -85,6 +85,34 @@ let f: string = 'aa';
 
 // jQuery('ff');
 
+abstract class Animal{
+
+    public constructor(public name: string){
+        this.name=name;
+    }
+
+    getName(){
+        return this.name;
+    }
+
+    abstract setName(name:string):void;
+}
+
+// const ani = new Animal('haha');
+// console.log(ani.getName());
+
+class Cat extends Animal{
+    constructor(name: string){
+        super(name);
+        console.log(this.name);
+    }
+    setName(name: string): void {
+        this.name = name;
+    }
+}
+
+
+
 
 
 
